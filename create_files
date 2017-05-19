@@ -18,7 +18,6 @@ do
   for ((j=0;j<$NUMFILES;j++))
   do
     RANDNUM=$RANDOM
-    echo "Random Number = " $RANDNUM
     for((k=0;k<$RANDNUM;k++))    
     do
       echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum eros vitae pretium posuere." >> user$i\file$j    
