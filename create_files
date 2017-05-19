@@ -1,0 +1,29 @@
+#!/bin/sh
+# A simple script to create user directories and fill them with junk files.
+# Useful for testing scripts that collect/analyze data in user directories.
+# 
+# File size typically ranges from a few hundred KB to a few MB.
+
+
+RANDOM=$$ #Seed Random
+echo "How many users would you like to create?"
+read NUMUSERS
+echo "How many files per user?"
+read NUMFILES
+for ((i=0;i<$NUMUSERS;i++))
+do
+  mkdir user$i
+  echo user$i "created"
+  cd user$i
+  for ((j=0;j<$NUMFILES;j++))
+  do
+    RANDNUM=$RANDOM
+    echo "Random Number = " $RANDNUM
+    for((k=0;k<$RANDNUM;k++))    
+    do
+      echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum eros vitae pretium posuere." >> user$i\file$j    
+    done
+    echo user$i\file$j "created"
+  done
+  cd ..
+done
