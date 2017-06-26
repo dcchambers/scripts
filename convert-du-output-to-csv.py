@@ -1,6 +1,10 @@
 # Reads in the output from $ du -csh --time * >> output.log
 # and prints it to a CSV file in the format "date,user,sizeOfHomeDir"
 #
+# To get the date in seconds since the epoch and size in KB, use the command:
+# $ du -sk --time --time-style=+%s * >> output.log
+# 
+#
 # Usage: Run $ python convert-to-csv.py [arg1] [arg2]
 # where [arg1] is the output.log file to be converted to CSV.
 # and [arg2] is the name of the output CSV file.
