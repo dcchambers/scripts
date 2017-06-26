@@ -4,6 +4,8 @@
 # To get the date in seconds since the epoch and size in KB, use the command:
 # $ du -sk --time --time-style=+%s * >> output.log
 # 
+# Once in csv format, you can use the GNU/Linux sort command to sort the CSV by date.
+# $ sort -t , -k 1 -n results.csv >> sorted.csv
 #
 # Usage: Run $ python convert-to-csv.py [arg1] [arg2]
 # where [arg1] is the output.log file to be converted to CSV.
