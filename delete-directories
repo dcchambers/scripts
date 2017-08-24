@@ -22,6 +22,6 @@ fi
 
 cat $1 | while read line
 do
-#    rm -r $line
+    rm -r $line
     echo "$line DELETED."
 done
