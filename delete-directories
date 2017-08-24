@@ -15,8 +15,13 @@
 # 
 # 
 
+if [ "$#" -ne 1 ]; then
+    echo "Incorrect number of command line arguments."
+    exit 1
+fi
+
 cat $1 | while read line
 do
-#  rm -r $line
-echo "$line DELETED."
+#    rm -r $line
+    echo "$line DELETED."
 done
