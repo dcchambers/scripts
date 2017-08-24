@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# WARNING: THIS WILL PERMANENTLY DELETE A DIRECTORY AND ALL THE CONTENTS
+#          OF THAT DIRECTORY. USE WITH CAUTION.
+#
+# A simple script that deletes a list of directories (and all the contents inside).
+# The list of directories to be deleted is contained in a simple text file that
+# is passed to the script by command line argument.
+# 
+# Author: Dakota Chambers
+#         Center for High Throughput Computing
+#         08 24 2017
+#   
+# Usage: $ ./delete-directories <list-of-directory-names>
+# 
+# 
+
+cat $1 | while read line
+do
+#  rm -r $line
+echo "$line DELETED."
+done
